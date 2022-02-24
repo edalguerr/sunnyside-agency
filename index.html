@@ -5,16 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Sunnyside agency landing page</title>
 
   <!--Stylesheet-->
-  <link rel="stylesheet" href="./sass/main.css.map">
+  <link rel="stylesheet" href="./sass/main.css">
 
   <!--Fonts-->
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Barlow">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Fraunces">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fraunces:wght@400;700;900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -22,12 +23,25 @@
   <section>
     <nav class="navbar" role="navigation">
 
-      <ul class="navbar-container">
-        <li class="navbar-item">
-          <a href="#" class="navbar-item__link">
-            <img src="./images/logo.svg" alt="Sunnyside" class="navbar-item__logo">
-          </a>
-        </li>
+      <a href="#" class="navbar-logo">
+        <img src="./images/logo.svg" alt="Sunnyside" class="navbar-logo__image">
+      </a>
+
+      <div class="navbar-container">
+      
+        <button class="navbar-toggle">
+          <img src="./images/icon-hamburger.svg" alt="mobile-click-icon" class="navbar-toggle__icon" />
+        </button>
+            
+        <ul class="navbar-bocadillo">
+          <li class="navbar-item"><a href="#" class="navbar-item__link">About</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-item__link">Services</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-item__link">Projects</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-item__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <ul class="navbar-container-desktop">
         <li class="navbar-item"><a href="#" class="navbar-item__link">About</a></li>
         <li class="navbar-item"><a href="#" class="navbar-item__link">Services</a></li>
         <li class="navbar-item"><a href="#" class="navbar-item__link">Projects</a></li>
@@ -229,7 +243,7 @@
     </ul>
 
     <p class="attribution">
-      Challenge by 
+      Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/edalguerr" target="__blank">@edalguerr</a>.
     </p>

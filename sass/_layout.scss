@@ -1,0 +1,76 @@
+/****** navigation bar ******/
+
+.navbar {
+    height: 50px;
+    padding: 5px 10px;
+    background: hsl(228deg 51% 79%); /*hsl(228deg 63% 81%)*/
+    @include display-flex;
+    @include flex-direction-row;
+    @include align-items(center);
+    @include justify-content(space-between);
+}
+
+.navbar-logo {
+    flex-basis: 40%;
+    text-align: left;
+}
+
+.navbar-container {
+    flex-basis: 15%;
+    text-align: right;
+}
+
+.navbar-toggle {
+    border: 0;
+    background: transparent;
+}
+
+.navbar-bocadillo {
+    display: none;
+}
+
+.navbar-container-desktop {
+    display: none;
+}
+
+
+/****** header ******/
+
+.header {   
+    height: 400px;
+    background-image: url(../images/mobile/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    @include display-flex;
+    @include flex-direction-column;
+    @include align-items(center);
+}
+
+.header__title {
+    height: 45%;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    line-height: 3rem;
+    @include display-flex;
+    @include align-items(center);
+    @include title( 
+        map-get($fonts-family, 'Primary'), 
+        2.2rem, 
+        map-get($primary-font-weights, 'bold'), 
+        center, 
+        white
+    );        
+}
+
+
+/****** footer ******/
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

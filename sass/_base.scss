@@ -85,6 +85,7 @@ audio,
 video {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     border: 0;
     font-size: 100%;
     font: inherit;
@@ -110,6 +111,7 @@ section {
 
 body {
     line-height: 1;
+    font-size: 18px;
 }
 
 ol,
@@ -253,7 +255,7 @@ $secondary-font-weights: (
     justify-content: $value;
 }
 
-@mixin  align-items($value) {
+@mixin align-items($value) {
     align-items: $value;
 }
 
@@ -280,4 +282,4 @@ $secondary-font-weights: (
 
 /*****************************
 ========== functions =========
-******************************/
+*****************************/
