@@ -1,6 +1,22 @@
+/*********************************
+=========== VARIABLES ============
+**********************************/
+/******************************
+=========== MIXINS ============
+*******************************/
+/*-------- FLEXBOX ----------*/
+/*---------- GRID -------------*/
+/*------ MEDIA QUERIES --------*/
+/*****************************
+========== functions =========
+*****************************/
 /**********************************
 ============= reset ===============
 ***********************************/
+:root {
+  font-size: 18px;
+}
+
 html,
 body,
 div,
@@ -136,24 +152,10 @@ table {
   border-spacing: 0;
 }
 
-/*********************************
-=========== variables ============
-**********************************/
-/******************************
-=========== mixins ============
-*******************************/
-/*-------- flexbox ----------*/
-/*---------- grid -------------*/
-/*------ media queries --------*/
-/*****************************
-========== functions =========
-*****************************/
-/****** navigation bar ******/
+/****** NAVIGATION BAR ******/
 .navbar {
-  height: 50px;
-  padding: 5px 10px;
-  background: #aeb9e5;
-  /*hsl(228deg 63% 81%)*/
+  padding: 1.8rem 1.2rem 0.55rem 1.2rem;
+  background: #3ebfff;
   display: -ms-flexbox;
   display: flex;
   flex-direction: row;
@@ -184,9 +186,9 @@ table {
   display: none;
 }
 
-/****** header ******/
+/****** HEADER ******/
 .header {
-  height: 400px;
+  height: 69vh;
   background-image: url(../images/mobile/image-header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -198,20 +200,29 @@ table {
 }
 
 .header__title {
+  box-sizing: border-box;
   height: 45%;
-  letter-spacing: 8px;
+  padding-top: 1rem;
+  letter-spacing: 5px;
   text-transform: uppercase;
   line-height: 3rem;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+  font-family: "Fraunces";
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   color: white;
 }
 
-/****** footer ******/
+.header__decorative-arrow {
+  position: relative;
+  top: 5%;
+  height: 25%;
+}
+
+/****** FOOTER ******/
 .attribution {
   font-size: 11px;
   text-align: center;

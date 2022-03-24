@@ -1,9 +1,8 @@
-/****** navigation bar ******/
+/****** NAVIGATION BAR ******/
 
 .navbar {
-    height: 50px;
-    padding: 5px 10px;
-    background: hsl(228deg 51% 79%); /*hsl(228deg 63% 81%)*/
+    padding: 1.8rem 1.2rem 0.55rem 1.2rem;
+    background: #3ebfff;
     @include display-flex;
     @include flex-direction-row;
     @include align-items(center);
@@ -34,10 +33,10 @@
 }
 
 
-/****** header ******/
+/****** HEADER ******/
 
 .header {   
-    height: 400px;
+    height: 69vh;
     background-image: url(../images/mobile/image-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,23 +47,31 @@
 }
 
 .header__title {
+    box-sizing: border-box;
     height: 45%;
-    letter-spacing: 8px;
+    padding-top: 1rem;
+    letter-spacing: 5px;
     text-transform: uppercase;
     line-height: 3rem;
     @include display-flex;
     @include align-items(center);
     @include title( 
-        map-get($fonts-family, 'Primary'), 
+        map-get($fonts-family, 'primary'), 
         2.2rem, 
-        map-get($primary-font-weights, 'bold'), 
+        map-get($primary-font-weights, 'bolder'), 
         center, 
         white
     );        
 }
 
+.header__decorative-arrow {
+    position: relative;
+    top: 5%;
+    height: 25%;
+}
 
-/****** footer ******/
+
+/****** FOOTER ******/
 
 .attribution { 
     font-size: 11px; 
