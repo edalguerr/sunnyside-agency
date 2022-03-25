@@ -191,6 +191,63 @@
     }
 }
 
+
+.client-testimonial-item {
+    text-align: center;
+    @include item-container(2.6rem 1.2rem);
+}
+
+.client-testimonials__title {
+    padding: 3.5rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    @include text-component(
+        map-get($fonts-family, 'primary'), 
+        0.9rem, 
+        map-get($primary-font-weights, 'bolder'), 
+        center, 
+        map-get($neutral-colors, 'grayish-blue')
+    );
+}
+
+.client-testimonial-item__profile-image {
+    border-radius: 50%;
+    @include image-grid(72px);
+}
+
+.client-testimonial-item__description {
+    margin: 2rem 0;
+    line-height: 1.6rem;
+    @include text-component(
+        map-get($fonts-family, 'secondary'), 
+        1rem, 
+        map-get($secondary-font-weights, 'semi-bold'), 
+        center, 
+        map-get($neutral-colors, 'very-dark-grayish-blue')
+    );
+}
+
+.client-testimonial-item__name {
+    margin-bottom: 1rem;
+    @include text-component(
+        map-get($fonts-family, 'primary'), 
+        1rem, 
+        map-get($primary-font-weights, 'bolder'), 
+        center, 
+        map-get($primary-colors, 'dark-desaturated-cyan')
+    );
+}
+
+.client-testimonial-item__profession {
+    @include text-component(
+        map-get($fonts-family, 'secondary'), 
+        0.75rem, 
+        map-get($secondary-font-weights, 'semi-bold'), 
+        center, 
+        map-get($neutral-colors, 'grayish-blue')
+    );
+}
+
 /****** FOOTER ******/
 
 .attribution { 
