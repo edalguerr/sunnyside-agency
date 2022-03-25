@@ -100,20 +100,26 @@
 
     <section>
       <ul class="services-container">
-
-        <!--@TODO: the background image will be assigned in the .service-item-->
+      
         <li class="service-item">
-          <h2 class="service-item__title">Graphic design</h2>
+          <picture class="service-item__image-container">
+            <source media="(min-width: 1440px)" srcset="./images/desktop/image-graphic-design.jpg">
+            <img src="./images/mobile/image-graphic-design.jpg" alt="Graphic design" class="service-item__image">
+          </picture>
+          <h2 class="service-item__title">Graphic Design</h2>
           <p class="service-item__description">
             Great design makes you memorable. We deliver artwork that underscores your brand message and captures
             potential clients’ attention.
           </p>
         </li>
 
-        <!--@TODO: the background image will be assigned in the .service-item-->
         <li class="service-item">
-          <h2 class="service-item__title">Photography</h2>
-          <p class="service-item__description">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./images/desktop/image-photography.jpg">
+            <img src="./images/mobile/image-photography.jpg" alt="Graphic design" class="service-item__image">
+          </picture>
+          <h2 class="service-item__title service-item__title--color_dark-blue">Photography</h2>
+          <p class="service-item__description service-item__description--color_dark-blue">
             Increase your credibility by getting the most stunning, high-quality photos that improve your business
             image.
           </p>

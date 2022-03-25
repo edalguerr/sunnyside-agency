@@ -73,7 +73,7 @@
 /******* MAIN ***********/
 
 .about-item {
-    @include item-container(3rem 0.833rem);
+    @include item-container(4rem 0.833rem);
     @include display-flex;
     @include flex-direction-column;
     @include align-items(center);
@@ -124,22 +124,71 @@
         center, 
         map-get($neutral-colors, 'very-dark-desaturated-blue')
     );
+
+    &::after {
+        content: "";
+        height: 12px;
+        z-index: -1;
+        position: absolute;
+        left: -9px;
+        right: -9px;
+        top: 9px;
+        border-radius: 5px;
+        background: #84fab0;   
+    }
+
+    &--decoration_gray::after {
+        background: #fdd9d4;
+    }
 }
 
-.about-item__link::after {
-    content: "";
-    height: 12px;
-    z-index: -1;
-    position: absolute;
-    left: -9px;
-    right: -9px;
-    top: 9px;
-    border-radius: 5px;
-    background: #84fab0;
-  }
 
-.about-item__link--decoration_gray::after {
-    background: #fdd9d4;
+.service-item {
+    position: relative;
+}
+
+.service-item__image-container {
+    position: relative;
+    bottom: -5px;
+}
+
+.service-item__image {
+    @include image-grid;
+}
+
+.service-item__title {
+    width: 100%;
+    position: absolute;
+    bottom: 28%;
+    @include text-component(
+        map-get($fonts-family, 'primary'), 
+        1.55rem, 
+        map-get($primary-font-weights, 'bolder'), 
+        center, 
+        map-get($primary-colors, 'dark-desaturated-cyan')
+    );
+
+    &--color_dark-blue {
+        color: map-get($primary-colors, 'dark-blue' );
+    }
+}
+
+.service-item__description {
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 9%;
+    line-height: 1.5rem;
+    @include text-component(
+        map-get($fonts-family, 'secondary'), 
+        0.9rem, 
+        map-get($secondary-font-weights, 'semi-bold'), 
+        center, 
+        map-get($primary-colors, 'dark-desaturated-cyan')
+    );
+
+    &--color_dark-blue {
+        color: map-get($primary-colors, 'dark-blue' );
+    }
 }
 
 /****** FOOTER ******/
