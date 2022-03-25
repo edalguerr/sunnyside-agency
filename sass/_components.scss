@@ -1,4 +1,4 @@
-@mixin title( 
+@mixin text-component( 
   $font-family, 
   $font-size, 
   $font-weight, 
@@ -11,4 +11,24 @@
   font-weight: $font-weight;
   text-align: $text-align;
   color: $color;
+}
+
+
+@mixin item-container($padding){
+  box-sizing: border-box;
+  padding: $padding
+};
+
+
+@mixin image-grid(
+  $width,
+  $height:auto,
+  $position: center,
+  $object-fit: cover
+) {
+
+  width: $width;
+  height: $height;
+  position: $position;
+  object-fit: $object-fit;
 }

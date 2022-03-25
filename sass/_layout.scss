@@ -55,7 +55,7 @@
     line-height: 3rem;
     @include display-flex;
     @include align-items(center);
-    @include title( 
+    @include text-component( 
         map-get($fonts-family, 'primary'), 
         2.2rem, 
         map-get($primary-font-weights, 'bolder'), 
@@ -70,6 +70,77 @@
     height: 25%;
 }
 
+/******* MAIN ***********/
+
+.about-item {
+    @include item-container(3rem 0.833rem);
+    @include display-flex;
+    @include flex-direction-column;
+    @include align-items(center);
+}
+
+.about-item--type_only_image {
+    @include item-container (0);
+}
+
+.about-item__image {    
+    @include image-grid(100%);
+}
+
+.about-item__title {
+    margin-bottom: 1.7rem;
+    line-height: 2.4rem;
+    @include text-component(
+        map-get($fonts-family, 'primary'), 
+        1.8rem, 
+        map-get($primary-font-weights, 'bolder'), 
+        center, 
+        map-get($neutral-colors, 'very-dark-desaturated-blue')
+    );
+}
+
+.about-item__description {
+    margin-bottom: 3rem;
+    line-height: 1.5rem;
+    @include text-component(
+        map-get($fonts-family, 'secondary'), 
+        1rem, 
+        map-get($secondary-font-weights, 'semi-bold'), 
+        center, 
+        map-get($neutral-colors, 'dark-grayish-blue')
+    );
+}
+
+.about-item__link {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    @include text-component(
+        map-get($fonts-family, 'primary'), 
+        0.85rem, 
+        map-get($primary-font-weights, 'bolder'), 
+        center, 
+        map-get($neutral-colors, 'very-dark-desaturated-blue')
+    );
+}
+
+.about-item__link::after {
+    content: "";
+    height: 12px;
+    z-index: -1;
+    position: absolute;
+    left: -9px;
+    right: -9px;
+    top: 9px;
+    border-radius: 5px;
+    background: #84fab0;
+  }
+
+.about-item__link--decoration_gray::after {
+    background: #fdd9d4;
+}
 
 /****** FOOTER ******/
 
