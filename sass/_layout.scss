@@ -248,6 +248,27 @@
     );
 }
 
+
+.gallery-projects-container {
+    @include display-grid;
+    @include grid-template-columns(1fr 1fr);
+}
+
+
+.project-item {
+    position: relative;
+}
+
+.project-item__image-container {
+    position: relative;
+    bottom: -5px;
+}
+
+.project-item__image {
+    @include image-grid;
+}
+
+
 /****** FOOTER ******/
 
 .attribution { 

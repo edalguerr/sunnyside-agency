@@ -388,6 +388,29 @@ table {
   color: #a7abae;
 }
 
+.gallery-projects-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-item {
+  position: relative;
+}
+
+.project-item__image-container {
+  position: relative;
+  bottom: -5px;
+}
+
+.project-item__image {
+  width: 100%;
+  height: auto;
+  position: center;
+  object-fit: cover;
+}
+
 /****** FOOTER ******/
 .attribution {
   font-size: 11px;
