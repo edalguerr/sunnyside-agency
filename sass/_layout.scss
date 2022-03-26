@@ -197,11 +197,19 @@
         right: -9px;
         top: 9px;
         border-radius: 5px;
-        background: #84fab0;   
+        background: #84fab0;
     }
 
     &--decoration_gray::after {
         background: #fdd9d4;
+    }
+
+    &:hover::after {
+        background: map-get($primary-colors, "yelloww");
+    }
+
+    &--decoration_gray:hover::after {
+        background: map-get($primary-colors, "soft-red");
     }
 }
 
@@ -372,6 +380,10 @@
         center, 
         map-get($primary-colors, 'dark-moderate-cyan')
     );
+
+    &:hover {
+        color: #fff;
+    }
 }
 
 
@@ -381,6 +393,14 @@
     @include display-flex;
     @include justify-content(space-evenly);
     @include align-items(baseline);
+}
+
+.social-media-item__link {
+    fill: #2C7566;
+
+    &:hover {
+        fill: #fff;
+    }
 }
 
 
@@ -496,6 +516,11 @@
 
     .navbar-item__link--style_button--color_white {
         background-color: white;
+
+        &:hover {
+            color: white;
+            background-color: #ffffff3d;
+        }
     }
 
 

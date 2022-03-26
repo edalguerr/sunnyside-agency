@@ -361,6 +361,12 @@ table {
 .about-item__link--decoration_gray::after {
   background: #fdd9d4;
 }
+.about-item__link:hover::after {
+  background: #fad400;
+}
+.about-item__link--decoration_gray:hover::after {
+  background: #fe7867;
+}
 
 .service-item {
   position: relative;
@@ -519,6 +525,9 @@ table {
   text-align: center;
   color: #458c7e;
 }
+.secondary-nav-item__link:hover {
+  color: #fff;
+}
 
 .social-media-container {
   width: 60%;
@@ -527,6 +536,13 @@ table {
   display: flex;
   justify-content: space-evenly;
   align-items: baseline;
+}
+
+.social-media-item__link {
+  fill: #2C7566;
+}
+.social-media-item__link:hover {
+  fill: #fff;
 }
 
 .attribution {
@@ -641,6 +657,10 @@ table {
 
   .navbar-item__link--style_button--color_white {
     background-color: white;
+  }
+  .navbar-item__link--style_button--color_white:hover {
+    color: white;
+    background-color: #ffffff3d;
   }
 
   .navbar-logo {
