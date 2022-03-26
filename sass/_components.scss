@@ -32,3 +32,35 @@
   position: $position;
   object-fit: $object-fit;
 }
+
+@mixin button(
+  $width, 
+  $padding, 
+  $border-radius, 
+  $color, 
+  $background
+) {
+
+  width: $width;
+  padding: $padding;
+  border-radius: $border-radius;
+  color: $color;
+  background-color: $background;
+}
+
+
+@mixin fadedAnimation ($time: 0.8s, $animation: fadein) {
+  animation-name: $animation;
+  animation-duration: $time;
+  animation-fill-mode: both;
+}
+
+@keyframes fadein { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
+
+@keyframes fadeout { 
+  from { opacity: 1; } 
+  to { opacity: 0; } 
+}

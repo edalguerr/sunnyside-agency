@@ -152,6 +152,22 @@ table {
   border-spacing: 0;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /****** NAVIGATION BAR ******/
 .navbar {
   padding: 1.8rem 1.2rem 0.55rem 1.2rem;
@@ -176,10 +192,65 @@ table {
 .navbar-toggle {
   border: 0;
   background: transparent;
+  cursor: pointer;
 }
 
 .navbar-bocadillo {
-  display: none;
+  padding: 1.5rem;
+  z-index: 2;
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 13%;
+  background: white;
+  opacity: 0;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+.navbar-bocadillo::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  border: 20px solid white;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+.navbar-bocadillo--style_animated_in {
+  animation-name: fadein;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+.navbar-bocadillo--style_animated_out {
+  animation-name: fadeout;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.navbar-item {
+  text-align: center;
+}
+
+.navbar-item__link {
+  display: inline-block;
+  margin: 1rem 0;
+  text-decoration: none;
+  font-family: "Barlow";
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #818498;
+}
+.navbar-item__link--style_button {
+  font-family: "Fraunces";
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  width: auto;
+  padding: 1.2rem 1.8rem;
+  border-radius: 35px;
+  color: #23303e;
+  background-color: #fad400;
 }
 
 .navbar-container-desktop {

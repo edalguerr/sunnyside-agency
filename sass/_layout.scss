@@ -9,24 +9,87 @@
     @include justify-content(space-between);
 }
 
+
 .navbar-logo {
     flex-basis: 40%;
     text-align: left;
 }
+
 
 .navbar-container {
     flex-basis: 15%;
     text-align: right;
 }
 
+
 .navbar-toggle {
     border: 0;
     background: transparent;
+    cursor: pointer;
 }
 
+
 .navbar-bocadillo {
-    display: none;
+    padding: 1.5rem; 
+    z-index: 2;   
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 13%;
+    background: white;
+    opacity: 0;
+    @include display-flex;
+    @include flex-direction-column;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: 0;
+        border: 20px solid white;
+        border-left-color: transparent;
+        border-top-color: transparent;
+    }
+
+    &--style_animated_in {
+        @include fadedAnimation;
+    }
+
+    &--style_animated_out {
+        @include fadedAnimation(0.8s, fadeout);
+    }
 }
+
+.navbar-item {
+    text-align: center;
+}
+
+.navbar-item__link {
+    display: inline-block;
+    margin: 1rem 0;
+    text-decoration: none;
+    @include text-component(
+        map-get($fonts-family, 'secondary'), 
+        1.1rem, 
+        map-get($secondary-font-weights, 'semi-bold'), 
+        center, 
+        map-get($neutral-colors, 'dark-grayish-blue')
+    );
+
+    &--style_button {
+        font-family: map-get($fonts-family, 'primary');
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        @include button(
+            auto,
+            1.2rem 1.8rem, 
+            35px,         
+            map-get($neutral-colors, 'very-dark-desaturated-blue'),
+            map-get($primary-colors, 'yelloww'),
+        );
+    }
+}
+
 
 .navbar-container-desktop {
     display: none;
