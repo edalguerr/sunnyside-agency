@@ -5,6 +5,8 @@
 
 $layout: (
     mobile: 375px,
+    medium: 720px,
+    desktop-s: 1000px,
     desktop: 1440px
 );
 
@@ -126,7 +128,19 @@ $secondary-font-weights: (
 
 @mixin media ($breakpoint) {
     
-    @if $breakpoint == desktop {
+    @if $breakpoint == medium {
+        @media only screen and (min-width: map-get($layout, 'medium')) {
+            @content;
+        }
+    }
+    
+    @else if $breakpoint == desktop-s {
+        @media only screen and (min-width: map-get($layout, 'desktop-s')) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint == desktop {
         @media only screen and (min-width: map-get($layout, 'desktop')) {
             @content;
         }
