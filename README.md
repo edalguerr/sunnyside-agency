@@ -55,6 +55,6 @@ During the development of this project I strengthen my knowledge of html, css, s
 
 ## Author
 
-- Website - [Portfolio](https://www.your-site.com)
+- Website - [Portfolio](https://edalguerr.github.io/)
 - Frontend Mentor - [@edalguerr](https://www.frontendmentor.io/profile/edalguerr)
 - Twitter - [@edalguerr](https://twitter.com/edalguerr)
